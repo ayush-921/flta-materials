@@ -37,14 +37,18 @@ class _HomeState extends State<Home> {
           style: Theme.of(context).textTheme.headline6,
         ),
       ),
-      
+
       body: pages[_selectedIndex],
 
       // 4
       bottomNavigationBar: BottomNavigationBar(
         // 5
         selectedItemColor: Theme.of(context).textSelectionTheme.selectionColor,
-        // TODO: Set selected tab bar
+        // 10
+        currentIndex: _selectedIndex,
+          // 11
+        onTap: _onItemTapped,
+
         // 6
         items: <BottomNavigationBarItem>[
           const BottomNavigationBarItem(
